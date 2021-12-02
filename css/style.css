@@ -60,6 +60,11 @@ a:active {
   color: #f27168;
 }
 
+#contactinfo {
+  display: none;
+}
+
+
 
 #star-field {
   width: 100vw;

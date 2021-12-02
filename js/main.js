@@ -15,13 +15,20 @@
     // div.style.left = 'X'
   })
 
-
   const dl = document.createElement('datalist')
   dl.id = 'number'
   data.forEach((item) => {
     const o = document.createElement('option')
     o.value = item.name
     dl.appendChild(o)
+  })
+
+  const ct = document.querySelector('#contactlink')
+  ct.addEventListener('click', () => {
+    const minfo = document.querySelector('#maininfo')
+    const ctinfo = document.querySelector('#contactinfo')
+    minfo.style.display = 'none'
+    ctinfo.style.display = 'block'
   })
 
 // ..
