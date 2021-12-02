@@ -4,7 +4,6 @@ body {
   justify-content: center;
   align-items: center;
   background-image: url("../images/tothenumberPROJECT_webdesign.png");
-  background-size: cover;
 }
 
 .description {
@@ -60,6 +59,35 @@ a:active {
   color: #f27168;
 }
 
+.box {
+  background-color: #e1cd16;
+  opacity: 25%;
+  position: absolute;
+  width: 700px;
+  height: 450px;
+  top: 230px;
+  left: 350px;
+  right: 500px;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.text {
+  font-family: sans-serif;
+  font-size: 16.5px;
+  color: white;
+  position: absolute;
+  text-align: center;
+  width: 500px;
+  height: 500px;
+  top: 200px;
+  left: 350px;
+  right: 500px;
+}
+
+a.one:link {color:white;}
+a.one:visited {color:white;}
+a.one:hover {color:#f27168;}
 
 #star-field {
   width: 100vw;
