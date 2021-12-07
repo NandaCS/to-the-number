@@ -8,26 +8,36 @@ body {
 }
 
 .description {
-  /*       background-color: gray; */
+  /* background-color: gray; */
   width: 500px;
   height: 400px;
   position: absolute;
   top: 220px;
   left: 100px;
-  font-size: 16.5px;
+  font-size: 16.5px !important;
   color: white;
   font-family: sans-serif;
+}
+
+h2 {
+  font-size: 21px !important;
+  color: white;
 }
 
 .authorinfo {
   width: 400px;
   height: 400px;
   position: absolute;
-  top: 650px;
-  right: -100px;
+  top: 700px;
+  left: 100px;
   font-size: 15.5px;
   color: white;
   font-family: sans-serif;
+  font-style: italic;
+}
+
+#logo {
+  display: block;
 }
 
 .menu {
@@ -40,9 +50,10 @@ body {
   font-size: 18px;
 }
 
+/* links */
 /* visited link */
 a:visited {
-  color: #f27168;
+  color: #f27168 !important;
 }
 
 /* unvisited link */
@@ -52,20 +63,61 @@ a:link {
 
 /* mouse over link */
 a:hover {
-  color: #e1cd16;
+  color: #e1cd16 !important;
 }
 
 /* selected link */
 a:active {
   color: #f27168;
 }
+/* end of links */
 
+
+/* contact info css  */
 #contactinfo {
   display: none;
 }
 
+.reach {
+  font-size: 17px;
+}
+
+  a.one:link {color:white;}
+  a.one:visited {color:white;}
+  a.one:hover {color:#f27168;}
+/* end of contact info css */
 
 
+/* learn more css  */
+#learnmore {
+  display: none;
+}
+
+.tab-content {
+  color: white;
+  padding: 15px;
+  width: 50%;
+  height: 350px;
+  width: 1200px;
+  overflow: auto;
+}
+/* end of learn more css */
+
+/* join css  */
+#join {
+  display: none;
+}
+
+.form {
+  color: white;
+  padding: 15px;
+  width: 50%;
+  height: 400px;
+  width: 700px;
+}
+/* end of join css */
+
+/* stars css */
 #star-field {
   width: 100vw;
   height: 100vh;
@@ -77,11 +129,26 @@ a:active {
 .star-number {
   font-size: 32px;
   transform: translate(17px,67px);
+  font-family: sans-serif;
+  position: absolute;
 }
 
-.star-circle {
+.star-circle1 {
   width: 100px;
   height: 100px;
+  position: absolute;
   border-radius: 50%;
-  background-color: yellow;
+  background-color: #e1cd16;
+  filter: blur(20px);
 }
+
+.star-circle2 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #ffd567;
+  filter: blur(20px);
+}
+
+/* end of stars css */
