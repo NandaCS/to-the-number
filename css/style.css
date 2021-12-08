@@ -127,6 +127,7 @@ a:active {
   transform: translate(17px,67px);
   font-family: sans-serif;
   position: absolute;
+  color: white;
 }
 
 .star-circle1 {
