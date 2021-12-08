@@ -1,5 +1,11 @@
 (async () => {
-// --
+  //
+  window.addEventListener('mousemove', (e) => {
+    const reveal = document.querySelector('.blue-reveal')
+    reveal.style.left = e.clientX - reveal.offsetWidth / 2 + 'px'
+    reveal.style.top = e.clientY - reveal.offsetHeight / 2 + 'px'
+  })
+
   const data = await window.loadData('data/letters.csv')
 
   data.forEach(async (item) => {
@@ -7,15 +13,30 @@
 
     const sf = document.querySelector('#star-field')
     sf.innerHTML += html
+  })
 
-    const sc = sf.querySelector('.star-container:last-child')
-    sc.style.position = 'absolute'
-    sc.style.left = Math.random() * window.innerWidth + 'px'
-    sc.style.top = Math.random() * window.innerHeight + 'px'
-    sc.addEventListener('click', () => {
+  function updateStar (star) {
+    star.style.position = 'absolute'
+    star.style.left = Math.random() * window.innerWidth - star.offsetWidth + 'px'
+    star.style.top = Math.random() * window.innerHeight - star.offsetHeight + 'px'
+    star.addEventListener('click', () => {
       window.alert('hello')
     })
-  })
+    star.addEventListener('mouseover', () => {
+      star.style.opacity = 1
+    })
+    star.addEventListener('mouseout', () => {
+      star.style.opacity = 0
+    })
+  }
+
+  const checker = setInterval(() => {
+    const stars = document.querySelectorAll('.star-container')
+    if (stars.length === data.length) {
+      clearInterval(checker)
+      stars.forEach(updateStar)
+    }
+  }, 100)
 
   const dl = document.createElement('datalist')
   dl.id = 'number'

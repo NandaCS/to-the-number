@@ -123,6 +123,11 @@ a:active {
   left: 0px;
 }
 
+.star-container {
+  opacity: 0;
+  transition: opacity 0.25s
+}
+
 .star-number {
   font-size: 32px;
   transform: translate(17px,67px);
@@ -143,6 +148,15 @@ a:active {
   height: 50px;
   border-radius: 50%;
   background-color: #ffd567;
+  filter: blur(20px);
+}
+
+.blue-reveal {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: blue;
   filter: blur(20px);
 }
 
