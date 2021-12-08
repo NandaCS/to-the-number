@@ -118,6 +118,7 @@ a:active {
   width: 100vw;
   height: 100vh;
   position: absolute;
+  z-index: 10;
   top: 0px;
   left: 0px;
 }

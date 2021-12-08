@@ -12,6 +12,8 @@
     sc.style.position = 'absolute'
     sc.style.left = Math.random() * window.innerWidth + 'px'
     sc.style.top = Math.random() * window.innerHeight + 'px'
+    sc.addEventListener('click', () => {
+      window.alert('hello')
     })
   })
 
