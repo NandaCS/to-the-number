@@ -6,13 +6,13 @@
     const html = await window.htmlFromTemplate('templates/star.html', item)
 
     const sf = document.querySelector('#star-field')
-    sf.innerHTML = html
+    sf.innerHTML += html
 
-    const div = document.createElement('div')
-    div.innerHTML = html
-    div.style.position = 'absolute'
-    div.style.backgroundColor = 'blue'
-    // div.style.left = 'X'
+    const sc = sf.querySelector('.star-container:last-child')
+    sc.style.position = 'absolute'
+    sc.style.left = Math.random() * window.innerWidth + 'px'
+    sc.style.top = Math.random() * window.innerHeight + 'px'
+    })
   })
 
   const dl = document.createElement('datalist')
