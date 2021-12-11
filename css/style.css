@@ -19,6 +19,18 @@ body {
   font-family: sans-serif;
 }
 
+.description-letter {
+  /* background-color: gray; */
+  width: 550px;
+  height: 400px;
+  position: absolute;
+  top: 220px;
+  left: 100px;
+  font-size: 16.5px !important;
+  color: white;
+  font-family: sans-serif;
+}
+
 h2 {
   font-size: 21px !important;
   color: white;
@@ -46,6 +58,28 @@ h2 {
   font-size: 18px;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #022648;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #f27168;
+}
+
 /* links */
 /* visited link */
 a:visited {
@@ -66,8 +100,6 @@ a:hover {
 a:active {
   color: #f27168;
 }
-/* end of links */
-
 
 /* contact info css  */
 #contactinfo {
@@ -81,8 +113,6 @@ a:active {
   a.one:link {color:white;}
   a.one:visited {color:white;}
   a.one:hover {color:#f27168;}
-/* end of contact info css */
-
 
 /* learn more css  */
 #learnmore {
@@ -97,7 +127,6 @@ a:active {
   width: 1200px;
   overflow: auto;
 }
-/* end of learn more css */
 
 /* join css  */
 #join {
@@ -111,7 +140,6 @@ a:active {
   height: 400px;
   width: 700px;
 }
-/* end of join css */
 
 /* stars css */
 #star-field {
@@ -153,12 +181,57 @@ a:active {
 } */
 
 .blue-reveal {
-  width: 220px;
-  height: 220px;
+  width: 210px;
+  height: 210px;
   border-radius: 50%;
   position: absolute;
   background-color: #022648;
   filter: blur(20px);
 }
 
-/* end of stars css */
+/* letter css */
+#letter {
+  display: none;
+  overflow: auto;
+}
+
+.number {
+  position: relative;
+  font-size: 50px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #e1cd16;
+}
+
+.language {
+  position: relative;
+  font-size: 16.5px;
+  font-family: sans-serif;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.location {
+  position: relative;
+  font-size: 16.5px;
+  font-family: sans-serif;
+  text-align: right;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.initials {
+  position: relative;
+  font-size: 16.5px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-family: sans-serif;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.letter-text {
+  font-size: 18px;
+  position: relative;
+  font-family: sans-serif;
+}

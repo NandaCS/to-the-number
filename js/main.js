@@ -21,6 +21,7 @@
     star.style.top = Math.random() * window.innerHeight - star.offsetHeight + 'px'
     star.addEventListener('click', () => {
       window.alert('hello')
+    // HOW TO MAKE THIS CLICK EVENT OPEN THE LETTER//
     })
     star.addEventListener('mouseover', () => {
       star.style.opacity = 1
@@ -38,12 +39,32 @@
     }
   }, 100)
 
+  // LETTERS PART //
+  const letter = await window.loadData('data/letters.csv')
+
+  letter.forEach(async (item) => {
+    const html = await window.htmlFromTemplate('templates/letter.html', item)
+
+    const le = document.querySelector('#letter-field')
+    le.innerHTML += html
+  })
+
   const dl = document.createElement('datalist')
   dl.id = 'number'
   data.forEach((item) => {
     const o = document.createElement('option')
     o.value = item.name
     dl.appendChild(o)
+  })
+
+  // link transitions start
+
+  const test = document.querySelector('#testlink')
+  test.addEventListener('click', () => {
+    const minfo = document.querySelector('#maininfo')
+    const letter = document.querySelector('#letter')
+    minfo.style.display = 'none'
+    letter.style.display = 'block'
   })
 
   const lm = document.querySelector('#learnmorelink')
