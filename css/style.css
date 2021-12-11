@@ -118,45 +118,46 @@ a:active {
   width: 100vw;
   height: 100vh;
   position: absolute;
-  z-index: 10;
+  /* z-index: 30; */
   top: 0px;
   left: 0px;
 }
 
 .star-container {
   opacity: 0;
-  transition: opacity 0.25s
+  transition: opacity 0.15s
 }
 
 .star-number {
-  font-size: 32px;
-  transform: translate(17px,67px);
+  font-size: 30px;
+  transform: translate(17px,120px);
   font-family: sans-serif;
   color: white;
 }
 
 .star-circle1 {
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
+  right: 100px;
   border-radius: 50%;
   background-color: #e1cd16;
   filter: blur(20px);
 }
 
-.star-circle2 {
-  width: 50px;
-  height: 50px;
+/* .star-circle2 {
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background-color: #ffd567;
   filter: blur(20px);
-}
+} */
 
 .blue-reveal {
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
   position: absolute;
-  background-color: blue;
+  background-color: #022648;
   filter: blur(20px);
 }
 
