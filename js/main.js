@@ -20,8 +20,10 @@
     star.style.left = Math.random() * window.innerWidth - star.offsetWidth + 'px'
     star.style.top = Math.random() * window.innerHeight - star.offsetHeight + 'px'
     star.addEventListener('click', () => {
-      window.alert('hello')
-    // HOW TO MAKE THIS CLICK EVENT OPEN THE LETTER//
+      const minfo = document.querySelector('#maininfo')
+      const letter = document.querySelector('#letter')
+      minfo.style.display = 'none'
+      letter.style.display = 'block'
     })
     star.addEventListener('mouseover', () => {
       star.style.opacity = 1
@@ -41,14 +43,13 @@
 
   // LETTERS PART //
   const letter = await window.loadData('data/letters.csv')
-
   letter.forEach(async (item) => {
     const html = await window.htmlFromTemplate('templates/letter.html', item)
-
     const le = document.querySelector('#letter-field')
-    le.innerHTML += html
+    le.innerHTML = html
   })
 
+  // search bar?
   const dl = document.createElement('datalist')
   dl.id = 'number'
   data.forEach((item) => {
@@ -58,15 +59,6 @@
   })
 
   // link transitions start
-
-  const test = document.querySelector('#testlink')
-  test.addEventListener('click', () => {
-    const minfo = document.querySelector('#maininfo')
-    const letter = document.querySelector('#letter')
-    minfo.style.display = 'none'
-    letter.style.display = 'block'
-  })
-
   const lm = document.querySelector('#learnmorelink')
   lm.addEventListener('click', () => {
     const minfo = document.querySelector('#maininfo')

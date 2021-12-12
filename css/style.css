@@ -21,12 +21,12 @@ body {
 
 .description-letter {
   /* background-color: gray; */
-  width: 550px;
+  width: 500px;
   height: 400px;
   position: absolute;
   top: 220px;
   left: 100px;
-  font-size: 16.5px !important;
+  font-size: 20px !important;
   color: white;
   font-family: sans-serif;
 }
@@ -172,14 +172,6 @@ a:active {
   filter: blur(20px);
 }
 
-/* .star-circle2 {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background-color: #ffd567;
-  filter: blur(20px);
-} */
-
 .blue-reveal {
   width: 210px;
   height: 210px;
@@ -197,7 +189,7 @@ a:active {
 
 .number {
   position: relative;
-  font-size: 50px;
+  font-size: 40px;
   font-family: sans-serif;
   font-weight: bold;
   color: #e1cd16;
