@@ -52,9 +52,23 @@ h2 {
   width: 400px;
   position: absolute;
   top: 650px;
-  left: 100px;
+  left: 150px;
   font-family: sans-serif;
   font-size: 18px;
+}
+
+#learnmorelink {
+  margin-right: 10px;
+}
+
+#contactlink {
+  margin-right: 10px;
+}
+
+.instagram {
+  position: absolute;
+  top: 650px;
+  left: 100px;
 }
 
 /* width */
