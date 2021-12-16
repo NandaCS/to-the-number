@@ -1,4 +1,5 @@
 body {
+  overflow: hidden;
   margin: 0;
   height: 100vh;
   justify-content: center;
@@ -38,7 +39,6 @@ h2 {
 
 .authorinfo {
   width: 400px;
-  height: 400px;
   position: absolute;
   top: 700px;
   left: 100px;
@@ -50,7 +50,6 @@ h2 {
 
 .menu {
   width: 400px;
-  height: 400px;
   position: absolute;
   top: 650px;
   left: 100px;
@@ -146,19 +145,21 @@ a:active {
   width: 100vw;
   height: 100vh;
   position: absolute;
-  /* z-index: 30; */
   top: 0px;
   left: 0px;
 }
 
 .star-container {
   opacity: 0;
-  transition: opacity 0.15s
+  transition: opacity 0.15s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 
 .star-number {
   font-size: 30px;
-  transform: translate(17px,120px);
   font-family: sans-serif;
   color: white;
 }

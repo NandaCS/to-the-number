@@ -7,6 +7,8 @@
   })
 
   const data = await window.loadData('data/letters.csv')
+  const dict = {}
+  data.forEach(item => { dict[item.Timestamp] = item })
 
   data.forEach(async (item) => {
     const html = await window.htmlFromTemplate('templates/star.html', item)
@@ -17,13 +19,38 @@
 
   function updateStar (star) {
     star.style.position = 'absolute'
-    star.style.left = Math.random() * window.innerWidth - star.offsetWidth + 'px'
-    star.style.top = Math.random() * window.innerHeight - star.offsetHeight + 'px'
-    star.addEventListener('click', () => {
+    // random x position, from just right of the main info to the width of the page
+    const mi = document.querySelector('#maininfo')
+    const mainWidth = mi.offsetWidth + mi.offsetLeft
+    const w = (window.innerWidth - star.offsetWidth) - mainWidth
+    const x = (Math.random() * w) + mainWidth
+    // random y position, from top of page (0) to the bottom - full star height
+    const y = Math.random() * (window.innerHeight - star.offsetHeight)
+    star.style.left = x + 'px'
+    star.style.top = y + 'px'
+
+    star.addEventListener('click', async () => {
+      const num = star.querySelector('.star-number').textContent
+      const item = dict[num]
+      const html = await window.htmlFromTemplate('templates/letter.html', item)
+      const le = document.querySelector('#letter-field')
+      le.innerHTML = html
       const minfo = document.querySelector('#maininfo')
       const letter = document.querySelector('#letter')
       minfo.style.display = 'none'
       letter.style.display = 'block'
+      const ct = document.querySelector('#contactinfo')
+      const lct = document.querySelector('#letter')
+      ct.style.display = 'none'
+      lct.style.display = 'block'
+      const jo = document.querySelector('#join')
+      const ljo = document.querySelector('#letter')
+      jo.style.display = 'none'
+      ljo.style.display = 'block'
+      const lm = document.querySelector('#learnmore')
+      const llm = document.querySelector('#letter')
+      lm.style.display = 'none'
+      llm.style.display = 'block'
     })
     star.addEventListener('mouseover', () => {
       star.style.opacity = 1
@@ -40,14 +67,6 @@
       stars.forEach(updateStar)
     }
   }, 100)
-
-  // LETTERS PART //
-  const letter = await window.loadData('data/letters.csv')
-  letter.forEach(async (item) => {
-    const html = await window.htmlFromTemplate('templates/letter.html', item)
-    const le = document.querySelector('#letter-field')
-    le.innerHTML = html
-  })
 
   // search bar?
   const dl = document.createElement('datalist')
